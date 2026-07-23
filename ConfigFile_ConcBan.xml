@@ -1,0 +1,71 @@
+<config>
+
+	<strBotName>Conciliaciones Bancarias</strBotName>
+	<strBotPath>C:\RPA_ ConcilBanc</strBotPath>  
+ 	<strScreenShotPath>C:\RPA_ ConcilBanc\Screenshots\Screenshot.jpg</strScreenShotPath>
+	<strLogProcessPath>C:\RPA_ ConcilBanc\Logs\Process\</strLogProcessPath>
+	<strLogErrorPath>C:\RPA_ ConcilBanc\Logs\Error\</strLogErrorPath>
+  	<strToEmail>sbaylon@mobilityado.com; evelazquezs@mobilityado.com; contagadcentro@mobilityado.com;ingadcentro@mobilityado.com; contabilidad@grupoado.com.mx; ingresosmerida@mobilityado.com; IngresosCaribeVip23@mobilityado.com; IngresosChetumalVip23@mobilityado.com; IngresosCampecheVip23@mobilityado.com; IngresosCdDelCarmen23@mobilityado.com; gad04007contabilidad@mobilityado.com; guadalup@mobilityado.com; gadsurestebanc@mobilityado.com; contabilidadpagos@mobilityado.com; ldominguezt@mobilityado.com; emconciliaciones@mobilityado.com; ghernandezc@mobilityado.com; contadoresoriente@mobilityado.com; cobranzacbv@mobilityado.com; Ingresos_Oax_Conciliaciones@mobilityado.com; ventasmanuales@mobilityado.com; conciliacionbancterm2@mobilityado.com</strToEmail>
+    <strCcEmail>raramirezg@mobilityado.com; rdamian@mobilityado.com</strCcEmail>    
+    <strToEmailErrorConv>raramirezg@mobilityado.com; f.castelazo@mobilityado.com; rdamian@mobilityado.com;bcruzs@mobilityado.com  <!--; sbaylon@mobilityado.com; evelazquezs@mobilityado.com--></strToEmailErrorConv>
+
+  <!--contagadcentro@mobilityado.com;ingadcentro@mobilityado.com  sbaylon@mobilityado.com; rdamian@mobilityado.com; evelazquezs@mobilityado.com; cesrodri5@publicisgroupe.net</strCcEmail>-->
+	<strStartSubject>Inicio de ejecución: </strStartSubject>
+	<strEndSubject>Fin de ejecución: </strEndSubject>
+	<strErrorSubject>Error de ejecución: </strErrorSubject>
+  	<strFinColasSubject>Información cargada a JDE  </strFinColasSubject>
+	<strBitacoraPath>C:\RPA_ ConcilBanc\Bitacora\</strBitacoraPath> 
+	<strLocalInvoiceDownload>C:\RPA_ ConcilBanc\InvoicesDownload\</strLocalInvoiceDownload>
+	<strOneDriveSantander>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Santander/</strOneDriveSantander>
+	<strOneDriveBanamex>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Banamex/</strOneDriveBanamex>
+	<strOneDriveConcil>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Conciliado/</strOneDriveConcil>
+  	<strOneDriveBitacora>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Bitacora/</strOneDriveBitacora>
+ 	<strOneDriveBitacoraRP>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Bitacora_Reproceso/</strOneDriveBitacoraRP>
+  <strOneDriveCargaError>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/Txt%20con%20error%20en%20carga</strOneDriveCargaError>
+  <strOneDriveCargaMonitor>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones Bancarias/MonitoreoBitacora</strOneDriveCargaMonitor>
+
+
+	<strJDEurlProd>http://jdelatam.ado.net:8075/jde/E1Menu.maf?</strJDEurlProd>
+  	<strJDEurlPY>http://jdepy.ado.net:8050/jde/E1Menu.maf</strJDEurlPY>
+ 	<strEdosCtaUrlProd>http://edosdecuentagbl.ado.net</strEdosCtaUrlProd>		
+  	<strEdosCtaUrlPY> http://10.130.14.11:190/Login.aspx</strEdosCtaUrlPY>
+  	<strMonthBeforeCheck>1</strMonthBeforeCheck>		
+
+	<strFechaInicioCierre>1</strFechaInicioCierre>  <!-- condición es si es este día se completa el envio a workflow -->
+ 	<strFechaCierre>8</strFechaCierre>  <!-- condición es si es este día se completa el envio a workflow -->
+  <strFechaBitacoraRevision>3</strFechaBitacoraRevision> <!-- Desde esta fecha se toman la cuentas de las bitacoras--> 
+
+  	<strDiaLimiteMesPrevio>8</strDiaLimiteMesPrevio> <!--la condición es menor que, durante los días previos a este día se realiza ejecución con mes previo-->
+  	<strDiaInConcilMan>6</strDiaInConcilMan> <!-- inicio periodo que nos e realiza conciliación por conciliación manual (diaActual < x)-->
+  <strDiaFinConcilMan>8</strDiaFinConcilMan><!-- fin periodo que nos e realiza conciliación por conciliación manual (diaActual > x)--> 
+<!-- La indicación anterior es el periodo en el que no se carga la cola de trabajo por lo tanto FINCONMAN debe ser el número mas chico y INCONCILMAN debe ser el número mas grande -->
+
+	<strDiaPendConil>8</strDiaPendConil> <!-- día para retomar conciliaciones pendientes, se toma el archivo con este día para retomar conciliaciones pendientes -->
+
+
+ 	<strIP_JDEpy>10.131.0.11</strIP_JDEpy>
+ 	<strEsquema_JDEpy>OTRJBD</strEsquema_JDEpy>
+ 	<strPuerto_JDEpy>1521</strPuerto_JDEpy> 
+ 	<strIP_JDEprod>10.15.9.10</strIP_JDEprod>
+ 	<strEsquema_JDEprod>jde92bd.ado.com.mx</strEsquema_JDEprod>
+  	<strPuerto_JDEprod>1541</strPuerto_JDEprod>
+    <strPrefijoTablaProd>proddta</strPrefijoTablaProd>	
+  	<strPrefijoTablaPy>dtpdta</strPrefijoTablaPy>  	
+  <strAmbiente>PROD</strAmbiente>   <!--PY PROD  -->
+  
+<!--           RPA_DB           -->  
+  
+  <!--PROD-->
+    <strIpDB_RpaProd>172.16.25.11</strIpDB_RpaProd>
+    <strPuertoDB_RpaProd>1541</strPuertoDB_RpaProd>
+    <strEsquemaDB_RpaProd>botfinbd.ado.com.mx</strEsquemaDB_RpaProd>
+    <!--PY--> 
+    <strIpDB_RpaPy>172.16.25.41</strIpDB_RpaPy>  
+    <strPuertoDB_RpaPy>1531</strPuertoDB_RpaPy>
+    <strEsquemaDB_RpaPy>botfin.ado.net</strEsquemaDB_RpaPy>
+
+	<strCalendarConcil>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/CALENDARIO_CONCIL.xlsx</strCalendarConcil>
+	<strFechasFile>https://gado-my.sharepoint.com/personal/rpafinanzas_mobilityado_com/Documents/Conciliaciones%20Bancarias/ConfiguracionFechas_PROCESOFINAL.xlsx</strFechasFile>
+	<strFechasFileName>ConfiguracionFechas_PROCESOFINAL.xlsx</strFechasFileName>
+ 
+</config>
